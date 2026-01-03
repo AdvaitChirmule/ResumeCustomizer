@@ -1,0 +1,70 @@
+name latex-tools-dev
+category Package
+revision 76722
+shortdesc Development pre-release of the LaTeX tools bundle
+longdesc This is a pre-release version of the standard LaTeX tools
+longdesc bundle. It accompanies the pre-testing kernel code
+longdesc (latex-base-dev), and is intended for testing by knowledgeable
+longdesc users.
+containersize 47532
+containerchecksum 1aa75eaa9c2c9e80f230aee256b97d8be3ef3b9c03f2e364d0f281cc42b1725680fcf660be641681241f030e58c12b6a2f4d661573b5edc22c84992bdede9519
+doccontainersize 6352552
+doccontainerchecksum 3be9ba2e7f5bf7431d57c6ee4b1215bc623dff206923ecb700ea2eaeae826e7e1f0d164032d8fe80134102c82d60919b14891602a710f75a968bca205542c6ff
+srccontainersize 245696
+srccontainerchecksum 30960a14241f8c6fdd54ea4670b71e87c6c93176bf6199ebba59f8cf375b17c0581bbdcce43b74257d96886e9c1c82d58f9b7bf503e98e40d0534d14862cfaca
+runfiles size=137
+ texmf-dist/tex/latex-dev/tools/.tex
+ texmf-dist/tex/latex-dev/tools/afterpage.sty
+ texmf-dist/tex/latex-dev/tools/array-2016-10-06.sty
+ texmf-dist/tex/latex-dev/tools/array-2020-02-10.sty
+ texmf-dist/tex/latex-dev/tools/array-2023-11-01.sty
+ texmf-dist/tex/latex-dev/tools/array.sty
+ texmf-dist/tex/latex-dev/tools/bm.sty
+ texmf-dist/tex/latex-dev/tools/calc.sty
+ texmf-dist/tex/latex-dev/tools/dcolumn.sty
+ texmf-dist/tex/latex-dev/tools/delarray.sty
+ texmf-dist/tex/latex-dev/tools/e.tex
+ texmf-dist/tex/latex-dev/tools/enumerate.sty
+ texmf-dist/tex/latex-dev/tools/fontsmpl.sty
+ texmf-dist/tex/latex-dev/tools/fontsmpl.tex
+ texmf-dist/tex/latex-dev/tools/ftnright.sty
+ texmf-dist/tex/latex-dev/tools/h.tex
+ texmf-dist/tex/latex-dev/tools/hhline.sty
+ texmf-dist/tex/latex-dev/tools/indentfirst.sty
+ texmf-dist/tex/latex-dev/tools/l3sys-query.sty
+ texmf-dist/tex/latex-dev/tools/layout.sty
+ texmf-dist/tex/latex-dev/tools/longtable-2020-01-07.sty
+ texmf-dist/tex/latex-dev/tools/longtable.sty
+ texmf-dist/tex/latex-dev/tools/multicol-2017-04-11.sty
+ texmf-dist/tex/latex-dev/tools/multicol-2019-10-01.sty
+ texmf-dist/tex/latex-dev/tools/multicol-2024-05-23.sty
+ texmf-dist/tex/latex-dev/tools/multicol.sty
+ texmf-dist/tex/latex-dev/tools/q.tex
+ texmf-dist/tex/latex-dev/tools/r.tex
+ texmf-dist/tex/latex-dev/tools/rawfonts.sty
+ texmf-dist/tex/latex-dev/tools/s.tex
+ texmf-dist/tex/latex-dev/tools/shellesc.sty
+ texmf-dist/tex/latex-dev/tools/showkeys-2014-10-28.sty
+ texmf-dist/tex/latex-dev/tools/showkeys.sty
+ texmf-dist/tex/latex-dev/tools/somedefs.sty
+ texmf-dist/tex/latex-dev/tools/tabularx.sty
+ texmf-dist/tex/latex-dev/tools/thb.sty
+ texmf-dist/tex/latex-dev/tools/thc.sty
+ texmf-dist/tex/latex-dev/tools/thcb.sty
+ texmf-dist/tex/latex-dev/tools/theorem.sty
+ texmf-dist/tex/latex-dev/tools/thm.sty
+ texmf-dist/tex/latex-dev/tools/thmb.sty
+ texmf-dist/tex/latex-dev/tools/thp.sty
+ texmf-dist/tex/latex-dev/tools/trace.sty
+ texmf-dist/tex/latex-dev/tools/varioref-2016-02-16.sty
+ texmf-dist/tex/latex-dev/tools/varioref.sty
+ texmf-dist/tex/latex-dev/tools/verbatim.sty
+ texmf-dist/tex/latex-dev/tools/verbtest.tex
+ texmf-dist/tex/latex-dev/tools/x.tex
+ texmf-dist/tex/latex-dev/tools/xr-2023-07-04.sty
+ texmf-dist/tex/latex-dev/tools/xr.sty
+ texmf-dist/tex/latex-dev/tools/xspace.sty
+catalogue-ctan /macros/latex-dev/required/tools
+catalogue-license lppl1.3c
+catalogue-topics collection latex-devel pre-release
+catalogue-version pre-release 0
