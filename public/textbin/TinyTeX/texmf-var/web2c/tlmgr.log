@@ -1,0 +1,18 @@
+[Sun Jan  4 21:00:50 2026] install: enumitem
+[Sun Jan  4 21:00:51 2026] install: fontawesome
+[Sun Jan  4 21:00:51 2026] install: titlesec
+[Sun Jan  4 21:00:51 2026] command: mktexlsr
+[Sun Jan  4 21:00:52 2026] command: updmap-sys
+[Sun Jan  4 21:26:02 2026] install: fancyhdr
+[Sun Jan  4 21:26:03 2026] install: marvosym
+[Sun Jan  4 21:26:03 2026] command: mktexlsr
+[Sun Jan  4 21:26:03 2026] command: updmap-sys
+[Sun Jan  4 21:53:51 2026] install: babel-english
+[Sun Jan  4 21:53:51 2026] install: hyphen-english
+[Sun Jan  4 21:53:51 2026] command: mktexlsr
+[Sun Jan  4 21:53:51 2026] command: fmtutil-sys --byhyphen "language.dat" --no-error-if-no-engine=luametatex,luajithbtex,luajittex,mfluajit --status-file=C:\Users\hp\AppData\Local\Temp\GpC8KH6_sY\szfP_B_pPh
+[Sun Jan  4 21:54:16 2026]   OK: pdflatex.fmt/pdftex xelatex.fmt/xetex dvilualatex.fmt/luatex lualatex.fmt/luahbtex latex.fmt/pdftex
+[Sun Jan  4 21:54:16 2026] command: fmtutil-sys --byhyphen "language.def" --no-error-if-no-engine=luametatex,luajithbtex,luajittex,mfluajit --status-file=C:\Users\hp\AppData\Local\Temp\GpC8KH6_sY\szfP_B_pPh
+[Sun Jan  4 21:54:22 2026]   OK: pdflatex.fmt/pdftex xelatex.fmt/xetex dvilualatex.fmt/luatex lualatex.fmt/luahbtex latex.fmt/pdftex luahbtex.fmt/luahbtex pdftex.fmt/pdftex luatex.fmt/luatex xetex.fmt/xetex etex.fmt/pdftex dviluatex.fmt/luatex pdfetex.fmt/pdftex
+[Sun Jan  4 21:54:22 2026] command: fmtutil-sys --byhyphen "language.dat.lua" --no-error-if-no-engine=luametatex,luajithbtex,luajittex,mfluajit --status-file=C:\Users\hp\AppData\Local\Temp\GpC8KH6_sY\szfP_B_pPh
+[Sun Jan  4 21:54:23 2026]   OK: pdflatex.fmt/pdftex xelatex.fmt/xetex dvilualatex.fmt/luatex lualatex.fmt/luahbtex latex.fmt/pdftex luahbtex.fmt/luahbtex pdftex.fmt/pdftex luatex.fmt/luatex xetex.fmt/xetex etex.fmt/pdftex dviluatex.fmt/luatex pdfetex.fmt/pdftex

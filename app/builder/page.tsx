@@ -38,7 +38,11 @@ export default function builder() {
 
     async function generateResume() {
         const res = await fetch("/api/latex/generate", {
-            method: "GET",
+            method: "POST",
+            body: JSON.stringify({
+                experience: defaultExperiences,
+                project: defaultProjects
+            })
         });
 
         const text = await res.text();

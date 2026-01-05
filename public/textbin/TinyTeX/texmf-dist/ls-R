@@ -145,6 +145,7 @@ opentype
 pk
 source
 tfm
+truetype
 type1
 vf
 
@@ -185,6 +186,7 @@ pzdr.afm
 ./fonts/afm/public:
 amsfonts
 lm
+marvosym
 
 ./fonts/afm/public/amsfonts:
 cm
@@ -463,6 +465,9 @@ lmvtlo10.afm
 lmvtt10.afm
 lmvtto10.afm
 
+./fonts/afm/public/marvosym:
+marvosym.afm
+
 ./fonts/afm/urw:
 helvetic
 symbol
@@ -504,6 +509,7 @@ dvips
 
 ./fonts/enc/dvips:
 base
+fontawesome
 inconsolata
 lm
 tetex
@@ -542,6 +548,11 @@ texmext.enc
 texmital.enc
 texmsym.enc
 texnansx.enc
+
+./fonts/enc/dvips/fontawesome:
+fontawesomeone.enc
+fontawesomethree.enc
+fontawesometwo.enc
 
 ./fonts/enc/dvips/inconsolata:
 i4-ly1-0.enc
@@ -651,9 +662,11 @@ ckx.map
 amsfonts
 cm
 dummy-space
+fontawesome
 helvetic
 inconsolata
 lm
+marvosym
 psnfss
 symbol
 tetex
@@ -674,6 +687,9 @@ cmtext-bsr-interpolated.map
 
 ./fonts/map/dvips/dummy-space:
 dummy-space.map
+
+./fonts/map/dvips/fontawesome:
+fontawesome.map
 
 ./fonts/map/dvips/helvetic:
 uhv.map
@@ -698,6 +714,9 @@ lm-t5.map
 lm-texnansi.map
 lm-ts1.map
 lm.map
+
+./fonts/map/dvips/marvosym:
+marvosym.map
 
 ./fonts/map/dvips/psnfss:
 charter.map
@@ -753,9 +772,13 @@ tex-text.tec
 public
 
 ./fonts/opentype/public:
+fontawesome
 inconsolata
 lm
 lm-math
+
+./fonts/opentype/public/fontawesome:
+FontAwesome.otf
 
 ./fonts/opentype/public/inconsolata:
 InconsolataN-Bold.otf
@@ -2627,10 +2650,12 @@ msyr.tfm
 amsfonts
 cm
 etex
+fontawesome
 inconsolata
 knuth-lib
 latex-fonts
 lm
+marvosym
 pdftex
 tipa
 
@@ -2820,6 +2845,11 @@ cmvtt10.tfm
 
 ./fonts/tfm/public/etex:
 xbmc10.tfm
+
+./fonts/tfm/public/fontawesome:
+FontAwesome--fontawesomeone.tfm
+FontAwesome--fontawesomethree.tfm
+FontAwesome--fontawesometwo.tfm
 
 ./fonts/tfm/public/inconsolata:
 ly1-zi4b-0.tfm
@@ -3586,6 +3616,9 @@ ts1-lmvtlo10.tfm
 ts1-lmvtt10.tfm
 ts1-lmvtto10.tfm
 
+./fonts/tfm/public/marvosym:
+umvs.tfm
+
 ./fonts/tfm/public/pdftex:
 dummy-space.tfm
 pdftexspace.tfm
@@ -3756,14 +3789,25 @@ utmro8t.tfm
 ./fonts/tfm/urw35vf/zapfding:
 uzdr.tfm
 
+./fonts/truetype:
+public
+
+./fonts/truetype/public:
+marvosym
+
+./fonts/truetype/public/marvosym:
+marvosym.ttf
+
 ./fonts/type1:
 public
 urw
 
 ./fonts/type1/public:
 amsfonts
+fontawesome
 inconsolata
 lm
+marvosym
 pdftex
 tipa
 
@@ -4073,6 +4117,9 @@ msbm8.pfm
 msbm9.pfb
 msbm9.pfm
 
+./fonts/type1/public/fontawesome:
+FontAwesome.pfb
+
 ./fonts/type1/public/inconsolata:
 Inconsolata-zi4b.pfb
 Inconsolata-zi4r.pfb
@@ -4264,6 +4311,9 @@ lmvtt10.pfb
 lmvtt10.pfm
 lmvtto10.pfb
 lmvtto10.pfm
+
+./fonts/type1/public/marvosym:
+marvosym.pfb
 
 ./fonts/type1/public/pdftex:
 dummy-space.pfb
@@ -4697,6 +4747,7 @@ xelatex
 ./tex/generic:
 atbegshi
 babel
+babel-english
 bibtex
 bigintcalc
 bitset
@@ -6713,6 +6764,16 @@ babel-zh.ini
 babel-zu.ini
 babel-zulu.tex
 
+./tex/generic/babel-english:
+american.ldf
+australian.ldf
+british.ldf
+canadian.ldf
+english.ldf
+newzealand.ldf
+UKenglish.ldf
+USenglish.ldf
+
 ./tex/generic/bibtex:
 apalike.sty
 apalike.tex
@@ -6755,6 +6816,8 @@ gettitlestring.sty
 
 ./tex/generic/hyph-utf8:
 conversions
+loadhyph
+patterns
 
 ./tex/generic/hyph-utf8/conversions:
 conv-utf8-ec.tex
@@ -6766,6 +6829,24 @@ conv-utf8-lth.tex
 conv-utf8-qx.tex
 conv-utf8-t2a.tex
 conv-utf8-t8m.tex
+
+./tex/generic/hyph-utf8/loadhyph:
+loadhyph-en-gb.tex
+loadhyph-en-us.tex
+
+./tex/generic/hyph-utf8/patterns:
+tex
+txt
+
+./tex/generic/hyph-utf8/patterns/tex:
+hyph-en-gb.tex
+hyph-en-us.tex
+
+./tex/generic/hyph-utf8/patterns/txt:
+hyph-en-gb.hyp.txt
+hyph-en-gb.pat.txt
+hyph-en-us.hyp.txt
+hyph-en-us.pat.txt
 
 ./tex/generic/hyphen:
 dumyhyph.tex
@@ -6899,13 +6980,16 @@ auxhook
 base
 bookmark
 booktabs
+enumitem
 epstopdf-pkg
 etoolbox
 euenc
+fancyhdr
 fancyvrb
 filehook
 firstaid
 float
+fontawesome
 fontspec
 framed
 geometry
@@ -6924,6 +7008,7 @@ l3packages
 latexconfig
 letltxmacro
 lm
+marvosym
 mdwtools
 natbib
 psnfss
@@ -6933,6 +7018,7 @@ symbol
 tex-ini-files
 times
 tipa
+titlesec
 tools
 unicode-math
 url
@@ -7160,6 +7246,9 @@ bookmark.sty
 ./tex/latex/booktabs:
 booktabs.sty
 
+./tex/latex/enumitem:
+enumitem.sty
+
 ./tex/latex/epstopdf-pkg:
 epstopdf-base.sty
 epstopdf.sty
@@ -7184,6 +7273,12 @@ eu2lmssq.fd
 eu2lmtt.fd
 eu2lmvtt.fd
 
+./tex/latex/fancyhdr:
+extramarks-v4.sty
+extramarks.sty
+fancyhdr.sty
+fancyheadings.sty
+
 ./tex/latex/fancyvrb:
 fancyvrb-ex.sty
 fancyvrb.sty
@@ -7207,6 +7302,15 @@ underscore-ltx.sty
 
 ./tex/latex/float:
 float.sty
+
+./tex/latex/fontawesome:
+fontawesome.sty
+fontawesomesymbols-generic.tex
+fontawesomesymbols-pdftex.tex
+fontawesomesymbols-xeluatex.tex
+ufontawesomeone.fd
+ufontawesomethree.fd
+ufontawesometwo.fd
 
 ./tex/latex/fontspec:
 fontspec-luatex.sty
@@ -7443,6 +7547,10 @@ ts1lmssq.fd
 ts1lmtt.fd
 ts1lmvtt.fd
 
+./tex/latex/marvosym:
+marvosym.sty
+umvs.fd
+
 ./tex/latex/mdwtools:
 at.sty
 cmtt.sty
@@ -7614,6 +7722,11 @@ utipxtt.fd
 uxipx.fd
 uxipxss.fd
 vowel.sty
+
+./tex/latex/titlesec:
+titleps.sty
+titlesec.sty
+titletoc.sty
 
 ./tex/latex/tools:
 .tex

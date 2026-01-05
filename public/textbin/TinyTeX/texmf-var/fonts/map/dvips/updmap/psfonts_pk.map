@@ -1,9 +1,9 @@
-% c:/users/runneradmin/appdata/roaming/tinytex/texmf-var/fonts/map/dvips/updmap/psfonts_pk.map:
+% c:/users/hp/appdata/roaming/tinytex/texmf-var/fonts/map/dvips/updmap/psfonts_pk.map:
 % maintained by updmap[-sys] (multi).
 % Don't change this file directly. Use updmap[-sys] instead.
 % See the updmap documentation.
 % A log of the run that created this file is available here:
-% c:/users/runneradmin/appdata/roaming/tinytex/texmf-var/web2c/updmap.log
+% c:/users/hp/appdata/roaming/tinytex/texmf-var/web2c/updmap.log
 % ps2pk35.map
 cob NimbusMonL-Bold " TeXnANSIEncoding ReEncodeFont " <texnansi.enc <ucrb8a.pfb
 cobo NimbusMonL-BoldObli " TeXnANSIEncoding ReEncodeFont " <texnansi.enc <ucrbo8a.pfb
@@ -306,6 +306,10 @@ eusm6 EUSM7 <eusm7.pfb
 eusm7 EUSM7 <eusm7.pfb
 eusm8 EUSM7 <eusm7.pfb
 eusm9 EUSM10 <eusm10.pfb
+% fontawesome.map
+FontAwesome--fontawesomeone FontAwesome " fontawesomeone ReEncodeFont " <[fontawesomeone.enc <FontAwesome.pfb
+FontAwesome--fontawesomethree FontAwesome " fontawesomethree ReEncodeFont " <[fontawesomethree.enc <FontAwesome.pfb
+FontAwesome--fontawesometwo FontAwesome " fontawesometwo ReEncodeFont " <[fontawesometwo.enc <FontAwesome.pfb
 % fpls.map
 pplbij8r TeXPalladioL-BoldItalicOsF " TeXBase1Encoding ReEncodeFont " <8r.enc <fplbij8a.pfb
 pplbj8r TeXPalladioL-BoldOsF " TeXBase1Encoding ReEncodeFont " <8r.enc <fplbj8a.pfb
@@ -908,6 +912,8 @@ ts1-lmvtl10 LMMonoPropLt10-Regular " enclmts1 ReEncodeFont " <lm-ts1.enc <lmvtl1
 ts1-lmvtlo10 LMMonoPropLt10-Oblique " enclmts1 ReEncodeFont " <lm-ts1.enc <lmvtlo10.pfb
 ts1-lmvtt10 LMMonoProp10-Regular " enclmts1 ReEncodeFont " <lm-ts1.enc <lmvtt10.pfb
 ts1-lmvtto10 LMMonoProp10-Oblique " enclmts1 ReEncodeFont " <lm-ts1.enc <lmvtto10.pfb
+% marvosym.map
+umvs MarVoSym <marvosym.pfb
 % mathpple.map
 eurbo10 EURB10 " .167 SlantFont " <eurb10.pfb
 eurmo10 EURM10 " .167 SlantFont " <eurm10.pfb
