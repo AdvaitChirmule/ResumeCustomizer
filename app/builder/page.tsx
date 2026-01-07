@@ -37,7 +37,7 @@ export default function builder() {
     }
 
     async function generateResume() {
-        const res = await fetch("/api/latex/generate", {
+        const res = await fetch("/api/latex/generatePdf", {
             method: "POST",
             body: JSON.stringify({
                 experience: defaultExperiences,

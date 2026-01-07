@@ -2,7 +2,7 @@ export interface Variant {
     id: number;
     variantDescription: string;
     keywords: string;
-    description: string;
+    description: string[];
 }
 
 export interface Project {
@@ -13,25 +13,25 @@ export interface Project {
     startDate: string;
     endDate: string;
     keywords: string;
-    description: string;
+    description: string[];
     variants: Variant[];
 }
 
 export const projects: Project[] = [
     {
         id: 0,
-        name: "Ultra Fast Resume Customizer",
+        name: "Resume Customizer",
         nick: "Resume",
         url: "/",
-        startDate: "Nov 2025",
-        endDate: "Dec 2025",
-        keywords: "Next.js, TypeScript, Tailwind CSS, Postgres",
-        description: "Developed an ultra fast resume customizer to speed up your job application process",
+        startDate: "Dec 2025",
+        endDate: "Jan 2026",
+        keywords: "Next.js, TypeScript, Supabase, Tailwind CSS",
+        description: ["Developed an ultra fast resume customizer to speed up your job application process"],
         variants: [{
             id: 0,
             variantDescription: "Base",
             keywords: "Next.js, TypeScript, Tailwind CSS, Postgres",
-            description: "Developed an ultra fast resume customizer to speed up your job application process"
+            description: ["Developed an ultra fast resume customizer to speed up your job application process"]
         }]
     },
     {
@@ -42,13 +42,13 @@ export const projects: Project[] = [
         startDate: "Nov 2025",
         endDate: "Dec 2025",
         keywords: "Next.js, TypeScript",
-        description: "You are looking at it right now!",
+        description: ["You are looking at it right now!"],
         variants: [
         {
             id: 0,
             variantDescription: "Base",
             keywords: "Next.js, TypeScript",
-            description: "You are looking at it right now!"
+            description: ["You are looking at it right now!"]
         }]
     },
     {
@@ -59,19 +59,34 @@ export const projects: Project[] = [
         startDate: "Jan 2025",
         endDate: "Aug 2025",
         keywords: "ASP.NET, C#, JavaScript, AJAX, Kotlin, XML, Firebase",
-        description: "Built a cross-platform GRE study app serving 100+ users, enabling vocab practice and a multiplayer word game",
+        description: [
+            "Built a cross-platform GRE study app serving 100+ users, enabling vocab practice and a multiplayer word game.",
+            "Developed web (ASP.NET MVC) and Android versions (Android Studio) connected via Firebase RESTful APIs for secure login and game room management.",
+            "Created a custom algorithm to handle network lag and maintain multiplayer game sync.",
+            "Added SQL Server caching for offline functionality and to reduce latency by 60%."
+        ],
         variants: [
         {
             id: 0,
             variantDescription: "Cross Platform",
             keywords: "ASP.NET, C#, JavaScript, AJAX, Kotlin, XML, Firebase",
-            description: "Built a cross-platform GRE study app serving 100+ users, enabling vocab practice and a multiplayer word game"
+            description: [
+                "Built a cross-platform GRE study app serving 100+ users, enabling vocab practice and a multiplayer word game.",
+                "Developed web (ASP.NET MVC) and Android versions (Android Studio) connected via Firebase RESTful APIs for secure login and game room management.",
+                "Created a custom algorithm to handle network lag and maintain multiplayer game sync.",
+                "Added SQL Server caching for offline functionality and to reduce latency by 60%."
+            ]
         },
         {
             id: 1,
             variantDescription: "Android App",
             keywords: "Android Studio, Kotlin, XML, Firebase",
-            description: "Built a cross-platform GRE study app serving 100+ users, enabling vocab practice and a multiplayer word game"
+            description: [
+                "Built a cross-platform GRE study app serving 100+ users, enabling vocab practice and a multiplayer word game.",
+                "Developed web (ASP.NET MVC) and Android versions (Android Studio) connected via Firebase RESTful APIs for secure login and game room management.",
+                "Created a custom algorithm to handle network lag and maintain multiplayer game sync.",
+                "Added SQL Server caching for offline functionality and to reduce latency by 60%."
+            ]
         }]
     },
     {
@@ -82,13 +97,21 @@ export const projects: Project[] = [
         startDate: "Aug 2024",
         endDate: "Dec 2024",
         keywords: "Java, Linux, Algorithms, Git",
-        description: "Developed an application that identifies famous personalities from videos by configuring an AWS EC2 instance to split videos using ffmpeg, and run through a deep learning recognition model.",
+        description: [
+            "Developed an application that identifies famous personalities from videos.",
+            "Configured an AWS EC2 instance to split videos using ffmpeg, and run through a deep learning recognition model.",
+            "Designed a inference layer using Amazon Machine Images (AMI), auto-scaling dynamically from 0 to 20 instances based on workload. Coupled with Amazon SQS queues, achieved a throughput of 500 requests in 240 seconds."
+        ],
         variants: [
         {
             id: 0,
             variantDescription: "Base",
             keywords: "Java, Linux, Algorithms, Git",
-            description: "Developed an application that identifies famous personalities from videos by configuring an AWS EC2 instance to split videos using ffmpeg, and run through a deep learning recognition model."
+            description: [
+                "Developed an application that identifies famous personalities from videos.",
+                "Configured an AWS EC2 instance to split videos using ffmpeg, and run through a deep learning recognition model.",
+                "Designed a inference layer using Amazon Machine Images (AMI), auto-scaling dynamically from 0 to 20 instances based on workload. Coupled with Amazon SQS queues, achieved a throughput of 500 requests in 240 seconds."
+            ]
         }]
     },
     {
@@ -99,13 +122,13 @@ export const projects: Project[] = [
         startDate: "Aug 2024",
         endDate: "May 2024",
         keywords: "Python, Image Processing",
-        description: "Worked on classifying the basic lung diseases on the CheXpert dataset using models like ImageIntern, ConvNext to establish SOTA baselines, after pre-processing the large datasets on the university's Slurm supercomputer.",
+        description: ["Worked on classifying the basic lung diseases on the CheXpert dataset using models like ImageIntern, ConvNext to establish SOTA baselines, after pre-processing the large datasets on the university's Slurm supercomputer."],
         variants: [
         {
             id: 0,
             variantDescription: "Base",
             keywords: "Python, Image Processing",
-            description: "Worked on classifying the basic lung diseases on the CheXpert dataset using models like ImageIntern, ConvNext to establish SOTA baselines, after pre-processing the large datasets on the university's Slurm supercomputer.",
+            description: ["Worked on classifying the basic lung diseases on the CheXpert dataset using models like ImageIntern, ConvNext to establish SOTA baselines, after pre-processing the large datasets on the university's Slurm supercomputer."],
         }]
     },
     {
@@ -116,13 +139,21 @@ export const projects: Project[] = [
         startDate: "Jan 2024",
         endDate: "May 2024",
         keywords: "Java, Linux, Algorithms, Git",
-        description: "Extended Minibase (Java DBMS on Linux) with column-store support and bitmap indexes, for efficient querying.",
+        description: [
+            "Extended Minibase (Java DBMS on Linux) with column-store support and bitmap indexes, for efficient querying.",
+            "Designed a custom compression algorithm using Run-Length Encoding (RLE) and Bit Stuffing, reducing storage footprint and achieving 15% faster performance than standard RLE.",
+            "Validated new features with CRUD operations and joins, successfully handling 100K rows in under 30 seconds."
+        ],
         variants: [
         {
             id: 0,
             variantDescription: "Base",
             keywords: "Java, Linux, Algorithms, Git",
-            description: "Extended Minibase (Java DBMS on Linux) with column-store support and bitmap indexes, for efficient querying.",
+            description: [
+                "Extended Minibase (Java DBMS on Linux) with column-store support and bitmap indexes, for efficient querying.",
+                "Designed a custom compression algorithm using Run-Length Encoding (RLE) and Bit Stuffing, reducing storage footprint and achieving 15% faster performance than standard RLE.",
+                "Validated new features with CRUD operations and joins, successfully handling 100K rows in under 30 seconds."
+            ],
         }]
     },
     {
@@ -133,13 +164,23 @@ export const projects: Project[] = [
         startDate: "Jan 2024",
         endDate: "May 2024",
         keywords: "React, FastAPI, Recharts, Node.js, Docker",
-        description: "Developed a Taiga project analytics tool delivering project analysis metrics to improve sprint efficiency.",
+        description: [
+            "Developed a Taiga project analytics tool delivering project analysis metrics to improve sprint efficiency.",
+            "Built with React (frontend), Node.js middleware, and a FastAPI backend (with OAuth 2.0 for login)",
+            "Achieved 80% faster performance with Redis caching and deployed scalable, containerized services using Docker.",
+            "Collaborated in Agile workflows, including sprint planning, code reviews, and daily standups, improving velocity."
+        ],
         variants: [
         {
             id: 0,
             variantDescription: "Base",
             keywords: "React, FastAPI, Recharts, Node.js, Docker",
-            description: "Developed a Taiga project analytics tool delivering project analysis metrics to improve sprint efficiency.",
+            description: [
+                "Developed a Taiga project analytics tool delivering project analysis metrics to improve sprint efficiency.",
+                "Built with React (frontend), Node.js middleware, and a FastAPI backend (with OAuth 2.0 for login)",
+                "Achieved 80% faster performance with Redis caching and deployed scalable, containerized services using Docker.",
+                "Collaborated in Agile workflows, including sprint planning, code reviews, and daily standups, improving velocity."
+            ],
         }]
     }
 ];
