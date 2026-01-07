@@ -1,6 +1,6 @@
 import path from "path"
 import { writeFile } from "fs/promises";
-import { getDownloadDetails, getUploadDetails, getTinyTexPathDetails } from "@/lib/supabase/getUserDetails";
+import { getDownloadDetails, getUploadDetails, getTinyTexPathDetails } from "@/lib/supabase/getPathDetails";
 import { execFile } from "child_process";
 
 export class PdfGenerator {
