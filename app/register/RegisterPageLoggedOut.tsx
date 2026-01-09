@@ -1,7 +1,7 @@
 "use client"
 
-import { registerUser } from "@/lib/supabase/auth";
-import { isLoggedIn } from "@/lib/supabase/getUserDetails.client";
+import { registerUser } from "@/lib/supabase/login/auth";
+import { isLoggedIn } from "@/lib/supabase/login/getUserDetails.client";
 import { useState } from "react";
 
 export default function RegisterPageLoggedOut() {

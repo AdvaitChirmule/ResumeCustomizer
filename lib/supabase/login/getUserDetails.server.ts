@@ -1,4 +1,4 @@
-import { createClient } from "./client"
+import { createClient } from "../server"
 
 export async function isLoggedIn() {
     const supabase = await createClient()

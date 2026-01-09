@@ -1,4 +1,4 @@
-import { isLoggedIn } from "@/lib/supabase/getUserDetails.server";
+import { isLoggedIn } from "@/lib/supabase/login/getUserDetails.server";
 import LoginPage from "./LoginPage";
 import LoginPageLoggedOut from "./LoginPageLoggedOut";
 

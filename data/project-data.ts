@@ -26,12 +26,20 @@ export const projects: Project[] = [
         startDate: "Dec 2025",
         endDate: "Jan 2026",
         keywords: "Next.js, TypeScript, Supabase, Tailwind CSS",
-        description: ["Developed an ultra fast resume customizer to speed up your job application process"],
+        description: [
+                "Developed a web app that customizes Resumes on Overleaf with just a few button clicks, in mere seconds.",
+                "Developed a lightweight frontend using Next.js, TypeScript, and Tailwind CSS for fast load times and clean UI.",
+                "Implemented Supabase authentication and database to manage user accounts and resume versions and variants."
+        ],
         variants: [{
             id: 0,
             variantDescription: "Base",
             keywords: "Next.js, TypeScript, Tailwind CSS, Postgres",
-            description: ["Developed an ultra fast resume customizer to speed up your job application process"]
+            description: [
+                "Developed a web app that customizes Resumes on Overleaf with just a few button clicks, in mere seconds.",
+                "Developed a lightweight frontend using Next.js, TypeScript, and Tailwind CSS for fast load times and clean UI.",
+                "Implemented Supabase authentication and database to manage user accounts and resume versions and variants."
+            ]
         }]
     },
     {

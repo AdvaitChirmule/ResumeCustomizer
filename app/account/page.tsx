@@ -1,6 +1,6 @@
 "use client"
 
-import { signOutUser } from "@/lib/supabase/auth"
+import { signOutUser } from "@/lib/supabase/login/auth"
 
 export default function account() {
     async function signOut(){
