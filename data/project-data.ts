@@ -190,5 +190,31 @@ export const projects: Project[] = [
                 "Collaborated in Agile workflows, including sprint planning, code reviews, and daily standups, improving velocity."
             ],
         }]
+    },
+    {
+        id: 7,
+        name: "Scalable Data Processing Pipeline for NYC Taxi Data",
+        nick: "Scalable",
+        url: "/",
+        startDate: "Aug 2024",
+        endDate: "Dec 2024",
+        keywords: "Neo4j, Kubernetes, Kafka, Zookeeper",
+        description: [
+            "Designed a scalable pipeline using Kubernetes, Kafka, and Neo4j for real-time document stream processing.",
+            "Deployed Minikube as the orchestrator and configured Kafka and Zookeeper for data ingestion and distribution.",
+            "Loaded data onto Neo4j and performed Page Rank and Breadth First Search used for finding busy areas and the best path."
+        ],
+        variants: [
+        {
+            id: 0,
+            variantDescription: "Base",
+            keywords: "Neo4j, Kubernetes, Kafka, Zookeeper",
+            description: [
+                "Designed a scalable pipeline using Kubernetes, Kafka, and Neo4j for real-time document stream processing.",
+                "Deployed Minikube as the orchestrator and configured Kafka and Zookeeper for data ingestion and distribution.",
+                "Loaded data onto Neo4j and performed Page Rank and Breadth First Search used for finding busy areas and the best path."
+            ]
+        }
+        ]
     }
 ];

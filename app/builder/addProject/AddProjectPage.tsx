@@ -10,7 +10,8 @@ export default function AddProjectPage(){
     const [startDate, setStartDate] = useState("")
     const [endDate, setEndDate] = useState("")
     const [keywords, setKeywords] = useState("")
-    const [description, setDescription] = useState("")
+    const [descriptionLine, setDescriptionLine] = useState("")
+    const [description, setDescription] = useState([descriptionLine])
     const [status, setStatus] = useState("")
 
     async function addProjectSubmitter() {
@@ -28,6 +29,19 @@ export default function AddProjectPage(){
         })
 
         setStatus(await res.text())
+    }
+
+    function updateDescription(description: string[], index: number, value: string) {
+        const copy = [...description]
+        copy[index] = value;
+        setDescription(copy)
+        setDescriptionLine("")
+    }
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            setDescription([...description, ""])
+        }
     }
 
     return (
@@ -57,9 +71,15 @@ export default function AddProjectPage(){
                     <label htmlFor="projectKeywords">Keywords</label>
                     <input id="projectKeywords" className="border rounded-md" value={keywords} onChange={(e) => setKeywords(e.target.value)}/>
                 </div>
-                <div className="col-span-2 p-3">
-                    <label htmlFor="projectDescription">Description</label>
-                    <input id="projectDescription" className="border rounded-md" value={description} onChange={(e) => setDescription(e.target.value)}/>
+                <div>
+                    {description.map((line, index) => (
+                        <div className="col-span-2 p-3" id={String(index)}>
+                            <label htmlFor="projectDescription">Description</label>
+                            <input id="projectDescription" className="border rounded-md" value={line} onChange={(e) => updateDescription(description, index, e.target.value)} onKeyDown={handleKeyDown}/>
+                        </div>
+                    ))}
+                    
+                    <button onClick={() => setDescription([...description, ""])}>Add Another</button>
                 </div>
                 <div>
                     <button onClick={() => addProjectSubmitter()}>Add Project</button>
