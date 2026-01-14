@@ -167,7 +167,7 @@ export const projects: Project[] = [
     {
         id: 6,
         name: "Taiga API Extraction",
-        nick: "Taiga Project Manager",
+        nick: "Taiga",
         url: "https://github.com/SER516-Clever/SER516-Team-Clever",
         startDate: "Jan 2024",
         endDate: "May 2024",

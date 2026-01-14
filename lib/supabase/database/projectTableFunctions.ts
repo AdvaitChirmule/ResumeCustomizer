@@ -23,3 +23,20 @@ export async function addProjectToTable(title: string, nick: string, url: string
 
     return new Response("Successfully Added Row")
 }
+
+export async function getProjectsFromTable() {
+    const userId = await getUserId()
+
+    const supabase = await createClient()
+
+    let { data, error } = await supabase
+    .from("user_project_table")
+    .select()
+    .eq("user_id", userId)
+
+    if (error) {
+        return {}
+    }
+
+    return data
+} 

@@ -51,20 +51,33 @@ export default function BuilderPage() {
 
     return (
         <div>
-            <div>
-                <div id="experience p-2">
+            <div id="resume" className="p-5 font-lmodern">
+                <div id="experience" className="p-2">
+                    <div>
+                        Experiences
+                    </div>
                     {Array.from({length: experienceCount}).map((_, i) => (
                         <div className="grid grid-cols-4 bg-gray-200 border p-2" key={i}>
                             <div className="grid grid-flow-col grid-rows-4 col-span-3 p-2">
-                                <div className="row-span-3 bg-white p-2">
-                                    <div>
+                                <div className="grid grid-cols-2 row-span-3 bg-white p-2">
+                                    <div className="text-base font-bold">
                                         {defaultExperiences[i].role}
                                     </div>
-                                    <div>
+                                    <div className="text-[15px] justify-items-end">
+                                        <div>{defaultExperiences[i].startDate} - {defaultProjects[i].endDate}</div>
+                                    </div>
+                                    <div className="text-sm italic">
                                         {defaultExperiences[i].company}
                                     </div>
-                                    <div>
-                                        {defaultExperiences[i].description}
+                                    <div className="text-sm italic justify-items-end">
+                                        <div>{defaultExperiences[i].location}</div>
+                                    </div>
+                                    <div className="col-span-2 ps-4 text-sm">
+                                        {Array.from({length: defaultExperiences[i].description.length}).map((_, j) => (
+                                            <div>
+                                                •  {defaultExperiences[i].description[j]}
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-10 p-2">
@@ -83,19 +96,28 @@ export default function BuilderPage() {
                         </div>
                     ))}
                 </div>
-                <div id="projects p-2">
+                <div id="projects" className="p-2">
+                    <div>
+                        Projects
+                    </div>
                     {Array.from({length: projectCount}).map((_, i) => (
-                        <div className="grid grid-cols-4 bg-gray-200 border p-2" key={i}>
+                        <div className="grid grid-cols-4 bg-gray-200 border" key={i}>
                             <div className="grid grid-flow-col grid-rows-4 col-span-3 p-2">
-                                <div className="row-span-3 bg-white p-2">
+                                <div className="grid grid-cols-2 row-span-3 bg-white p-2">
                                     <div>
-                                        {defaultProjects[i].name}
+                                        <span className="font-bold text-base">{defaultProjects[i].name}</span> | <span className="italic text-[15px]">{defaultProjects[i].keywords}</span>
                                     </div>
-                                    <div>
-                                        {defaultProjects[i].keywords}
+                                    <div className="justify-items-end text-[15px]">
+                                        <div>
+                                            {defaultProjects[i].startDate} - {defaultProjects[i].endDate}
+                                        </div> 
                                     </div>
-                                    <div>
-                                        {defaultProjects[i].description}
+                                    <div className="col-span-2 ps-4 text-sm">
+                                        {Array.from({length: defaultProjects[i].description.length}).map((_, j) => (
+                                            <div>
+                                                •  {defaultProjects[i].description[j]}
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-10 p-2">
@@ -106,9 +128,9 @@ export default function BuilderPage() {
                                     ))}
                                 </div>
                             </div>
-                            <div className="grid grid-cols-5 border p-2">
+                            <div className="p-2 bg-gray-100">
                                 {projects.map(project => (
-                                    <button key={project.id} onClick={() => changeProjectNumber(i, project.id)}>{project.nick}</button>
+                                    <button className="p-2" key={project.id} onClick={() => changeProjectNumber(i, project.id)}>{project.nick}</button>
                             ))}
                             </div>
                         </div>

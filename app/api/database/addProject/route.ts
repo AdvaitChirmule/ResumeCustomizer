@@ -8,7 +8,6 @@ export async function POST(req: Request) {
     const userId = await getUserId()
     const lastProjectId = await getUserLastProjectId(userId)
 
-
     const resp = await addProjectToTable(body.title, body.nick, body.url, body.startDate, body.endDate, body.keywords, body.description, lastProjectId)
 
     return new Response(await resp.text())
