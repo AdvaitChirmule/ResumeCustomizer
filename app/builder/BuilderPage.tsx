@@ -64,7 +64,7 @@ export default function BuilderPage() {
                                         {defaultExperiences[i].role}
                                     </div>
                                     <div className="text-[15px] justify-items-end">
-                                        <div>{defaultExperiences[i].startDate} - {defaultProjects[i].endDate}</div>
+                                        <div>{defaultExperiences[i].startDate} - {defaultExperiences[i].endDate}</div>
                                     </div>
                                     <div className="text-sm italic">
                                         {defaultExperiences[i].company}

@@ -48,8 +48,8 @@ export const experiences: Experience[] = [
         company: "Arizona State University",
         nick: "ASU",
         location: "Tempe, AZ",
-        startDate: "Nov 2025",
-        endDate: "Dec 2025",
+        startDate: "Aug 2024",
+        endDate: "May 2025",
         description: [
             "Studied the effects of hashtags on engagement and toxicity in social media through large-scale user studies.",
             "Led experiments with 2,000+ participants, automating data collection and validation workflows with Selenium.",
@@ -67,5 +67,29 @@ export const experiences: Experience[] = [
                 "Applied Reinforcement Learning to optimize hashtag strategies, reducing toxic comments by 20%."
             ]
         }]
-    }
+    },
+    {
+        id: 2,
+        role: "Computer Vision Intern",
+        company: "IotIot",
+        nick: "Iot",
+        location: "Pune, India",
+        startDate: "Jul 2022",
+        endDate: "Oct 2022",
+        description: [
+            "Developed a vehicle detection system using R CNN, achieving 80% accuracy by implementing a provided pipeline.",
+            "Compiled and annotated a comprehensive dataset from multiple sources for model training and optimization.",
+            "Containerized the application using Docker, ensuring consistent and scalable deployment across various environments."
+        ],
+        variants: [
+        {
+            id: 0,
+            variantDescription: "Base",
+            description: [
+                "Developed a vehicle detection system using R CNN, achieving 80% accuracy by implementing a provided pipeline.",
+                "Compiled and annotated a comprehensive dataset from multiple sources for model training and optimization.",
+                "Containerized the application using Docker, ensuring consistent and scalable deployment across various environments."
+            ]
+        }]
+    },
 ];
