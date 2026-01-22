@@ -25,7 +25,6 @@ export default function Home() {
           else {
             setLineHeight(document.body.scrollHeight - startHeight)
           }
-          console.log(lineHeight)
         }
       })
     }, {
