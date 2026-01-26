@@ -8,7 +8,7 @@ export default function BuilderPage() {
     const experienceCount = 2;
     const projectCount = 3;
 
-    const [defaultExperiences, setDefaultExperiences] = useState([experiences[0], experiences[1]]);
+    const [defaultExperiences, setDefaultExperiences] = useState([experiences[1], experiences[2]]);
     const [defaultProjects, setDefaultProjects] = useState([projects[2], projects[5], projects[6]]);
 
     function changeExperienceNumber(i: number, k: number): void {
@@ -136,7 +136,7 @@ export default function BuilderPage() {
                         </div>
                     ))}
                 </div>
-                <div>
+                <div className="mb-10">
                     <button onClick={() => generateResume()}>Submit</button>
                 </div>
             </div>
