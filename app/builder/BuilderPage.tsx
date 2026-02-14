@@ -22,6 +22,8 @@ export default function BuilderPage() {
     const [foundBetterMatch, setFoundBetterMatch] = useState(false)
     const [betterMatch, setBetterMatch] = useState<number[]>([])
 
+    const [hideJobDescription, setHideJobDescription] = useState(true)
+
     function changeExperienceNumber(i: number, k: number): void {
         var updated = [...defaultExperiences];
         updated[i] = experiences[k];
@@ -55,7 +57,7 @@ export default function BuilderPage() {
             })
         });
 
-                if (res.status == 200) { 
+        if (res.status == 200) { 
             toast.success("Generated PDF successfully!")
         }
         else if (res.status == 500) {
@@ -102,46 +104,10 @@ export default function BuilderPage() {
         setSkillMissing(missing)
     }
 
-    useEffect(() => {
-        getSkills()
-    }, [defaultProjects])
-
-    function getSkills() {
-        const included = []
-        const missing = []
-        const skillSet = extractSkillsFromDescription(jobDescription)
-
-        for (const skill of skillSet) {
-            let found = false
-            for (const project of defaultProjects) {
-                const projectSkills = project["keywords"].split(", ")
-                if (projectSkills.includes(skill)) {
-                    included.push(skill)
-                    found = true
-                    break
-                }
-            }
-
-            if (!found) {
-                missing.push(skill)
-            }
-        }
-
-        if (missing.length > 0) {
-            const optimalMatch = matchSkillsFromDescription(skillSet)
-            if (optimalMatch[0]) {
-                setFoundBetterMatch(true)
-            }
-        }
-
-        setSkillIncluded(included)
-        setSkillMissing(missing)
-    }
-
     return (
         <div>
             <div className="grid grid-cols-4 h-screen">
-                <div className="h-full p-5 bg-gray-200">
+                <div className={`bg-gray-200 transform transition-transform duration-300 ease-in-out ${hideJobDescription ? "col-span-0 -translate-x-full p-0 m-0 h-0" : "col-span-1 translate-x-0 p-5 h-full" }`} >
                     <div>
                         <label htmlFor="description">Enter job description here (Optional)</label>
                         <input id="description" className="border rounded-md bg-white h-13/20" value={jobDescription} onChange={(e) => setJobDescription(e.target.value)} />
@@ -158,7 +124,10 @@ export default function BuilderPage() {
                         ))}
                     </div>
                 </div>
-                <div id="resume" className="p-5 max-h-full font-lmodern col-span-3 overflow-auto">
+                <div id="resume" className={ `p-5 max-h-full font-lmodern overflow-auto transition-all duration-300 ease-in-out ${hideJobDescription ? "col-span-4" : "col-span-3"} `}>
+                    <div>
+                        <button onClick={() => hideJobDescription ? setHideJobDescription(false): setHideJobDescription(true)}>Get Job Description Tab</button>
+                    </div>
                     <div id="experience" className="p-2">
                         <div>
                             Experiences
