@@ -1,11 +1,11 @@
 export async function getUploadDetails() {
-    return "C:/Projects/ResumeCustomizer/resume-builder/tmp/user1/Advait Chirmule SE Resume.tex"
+    return process.env.UPLOAD_FILE_PATH
 }
 
 export async function getDownloadDetails() {
-    return "C:/Users/hp/Desktop/College Applications/New Resumes/Customizer"
+    return process.env.DOWNLOAD_FILE_PATH
 }
 
 export async function getTinyTexPathDetails() {
-    return "C:/Projects/ResumeCustomizer/resume-builder/public/textbin/TinyTeX/bin/windows/pdflatex.exe"
+    return process.env.TINYTEX_FILE_PATH
 }

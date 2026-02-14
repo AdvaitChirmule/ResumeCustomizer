@@ -14,6 +14,7 @@ export interface Project {
     endDate: string;
     keywords: string;
     description: string[];
+    variant: number;
     variants: Variant[];
 }
 
@@ -31,6 +32,7 @@ export const projects: Project[] = [
                 "Developed a lightweight frontend using Next.js, TypeScript, and Tailwind CSS for fast load times and clean UI.",
                 "Implemented Supabase authentication and database to manage user accounts and resume versions and variants."
         ],
+        variant: 0,
         variants: [{
             id: 0,
             variantDescription: "Base",
@@ -51,6 +53,7 @@ export const projects: Project[] = [
         endDate: "Dec 2025",
         keywords: "Next.js, TypeScript",
         description: ["You are looking at it right now!"],
+        variant: 0,
         variants: [
         {
             id: 0,
@@ -73,6 +76,7 @@ export const projects: Project[] = [
             "Created a custom algorithm to handle network lag and maintain multiplayer game sync.",
             "Added SQL Server caching for offline functionality and to reduce latency by 60%."
         ],
+        variant: 0,
         variants: [
         {
             id: 0,
@@ -110,6 +114,7 @@ export const projects: Project[] = [
             "Configured an AWS EC2 instance to split videos using ffmpeg, and run through a deep learning recognition model.",
             "Designed a inference layer using Amazon Machine Images (AMI), auto-scaling dynamically from 0 to 20 instances based on workload. Coupled with Amazon SQS queues, achieved a throughput of 500 requests in 240 seconds."
         ],
+        variant: 0,
         variants: [
         {
             id: 0,
@@ -131,6 +136,7 @@ export const projects: Project[] = [
         endDate: "May 2024",
         keywords: "Python, Image Processing",
         description: ["Worked on classifying the basic lung diseases on the CheXpert dataset using models like ImageIntern, ConvNext to establish SOTA baselines, after pre-processing the large datasets on the university's Slurm supercomputer."],
+        variant: 0,
         variants: [
         {
             id: 0,
@@ -152,6 +158,7 @@ export const projects: Project[] = [
             "Designed a custom compression algorithm using Run-Length Encoding (RLE) and Bit Stuffing, reducing storage footprint and achieving 15% faster performance than standard RLE.",
             "Validated new features with CRUD operations and joins, successfully handling 100K rows in under 30 seconds."
         ],
+        variant: 0,
         variants: [
         {
             id: 0,
@@ -178,6 +185,7 @@ export const projects: Project[] = [
             "Achieved 80% faster performance with Redis caching and deployed scalable, containerized services using Docker.",
             "Collaborated in Agile workflows, including sprint planning, code reviews, and daily standups, improving velocity."
         ],
+        variant: 0,
         variants: [
         {
             id: 0,
@@ -204,6 +212,7 @@ export const projects: Project[] = [
             "Deployed Minikube as the orchestrator and configured Kafka and Zookeeper for data ingestion and distribution.",
             "Loaded data onto Neo4j and performed Page Rank and Breadth First Search used for finding busy areas and the best path."
         ],
+        variant: 0,
         variants: [
         {
             id: 0,

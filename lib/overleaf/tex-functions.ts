@@ -23,7 +23,7 @@ export class TexResume {
                 {${element.company}}{${element.location}}
                 \\resumeItemListStart
             `
-            element.description.forEach(line => {
+            element.variants[element.variant].description.forEach(line => {
                 texExperience += `\\resumeItem {${line}}`
             })
 
@@ -39,10 +39,10 @@ export class TexResume {
         projects.forEach(element => {
             texProject += `
             \\resumeProjectHeading
-                {\\textbf{\\href{${element.url}}{${element.name}}} $|$ \\emph{${element.keywords}}}{${element.startDate} -- ${element.endDate}}
+                {\\textbf{\\href{${element.url}}{${element.name}}} $|$ \\emph{${element.variants[element.variant].keywords}}}{${element.startDate} -- ${element.endDate}}
                 \\resumeItemListStart
             `
-            element.description.forEach(line => {
+            element.variants[element.variant].description.forEach(line => {
                 texProject += `\\resumeItem {${line}}`
             })
 

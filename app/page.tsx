@@ -4,13 +4,18 @@ import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 
 export default function Home() {
-  const [nameElem, setNameElem] = useState("bye")
+  const [startTimeline, setStartTimeline] = useState(false)
+  const [startTimeline2, setStartTimeline2] = useState(false)
+  const [startTimeline3, setStartTimeline3] = useState(false)
 
-  const [startHeightSet, setStartHeightSet] = useState(false)
-
-  const [startHeight, setStartHeight] = useState(0)
-
-  const [lineHeight, setLineHeight] = useState(0)
+  useEffect(() => {
+    if (!startTimeline) return
+    const timeout = setTimeout(() => {
+      setStartTimeline2(true)
+    }, 500)
+    const timeout2 = setTimeout(() => {
+      setStartTimeline3(true)
+    }, 1000)  })
 
 
   useEffect(() => {
@@ -18,14 +23,7 @@ export default function Home() {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (!startHeightSet) {
-            setStartHeightSet(true)
-            setStartHeight(document.body.scrollHeight)
-          }
-          else {
-            setLineHeight(document.body.scrollHeight - startHeight)
-          }
-          console.log(lineHeight)
+          setStartTimeline(true)
         }
       })
     }, {
@@ -50,10 +48,22 @@ export default function Home() {
           <button className="bg-sky-800 rounded p-5">Learn More!</button>
         </div>
       </div>
-      <div id="hi" className="bg-gray-400 p-5 place-items-center w-full h-full">
-        <div id="hi2">hi</div>
-        Toggle buttons to quickly generate Overleaf PDFs
-        <div className="w-20 bg-white h-40" style={{height: Math.max(lineHeight, 160)}}></div>
+      <div id="hi" className="bg-gray-400 p-5 place-items-center grid grid-cols-9 w-full h-full">
+        <div></div>
+        <div className="grid grid-rows-3 col-span-3 h-full w-full">
+          <div className={`h-full w-full bg-white duration-300 ease-out ${startTimeline ? "scale-y-100": "scale-y-0"}`}>Swap projects with simple clicks</div>
+          <div className="h-full w-full"></div>
+          <div className={`h-full w-full bg-white duration-300 ease-out ${startTimeline3 ? "scale-y-100": "scale-y-0"}`}>Save your progress on your account</div>
+        </div>
+        <div className="h-full">
+          <div className={`w-1 h-full origin-top bg-black/50 duration-3600 ease-out ${startTimeline ? "scale-y-100": "scale-y-0"}`}></div>
+        </div>
+        <div className="grid grid-rows-3 col-span-3 h-full w-full">
+          <div className="h-full w-full"></div>
+          <div className={`h-full w-full bg-white duration-300 ease-out ${startTimeline2 ? "scale-y-100": "scale-y-0"}`}>Add job description to get recommendations to tweak your Resume</div>
+          <div className="h-full w-full"></div>
+        </div>
+        <div></div>
       </div>
       <div className="bg-gray-200 h-1/2">
         How we make your life easier

@@ -4,6 +4,8 @@ import {projects} from "@/data/project-data"
 import {experiences} from "@/data/experience-data"
 import { useState } from "react";
 
+import toast from "react-hot-toast";
+
 export default function BuilderPage() {
     const experienceCount = 2;
     const projectCount = 3;
@@ -19,7 +21,7 @@ export default function BuilderPage() {
 
     function changeExperienceVariant(i: number, j: number){
         var updated = [...defaultExperiences];
-        updated[i].description = defaultExperiences[i].variants[j].description;
+        updated[i].variant = j;
         setDefaultExperiences(updated);
     }
 
@@ -31,8 +33,7 @@ export default function BuilderPage() {
 
     function changeProjectVariant(i: number, j: number){
         var updated = [...defaultProjects];
-        updated[i].keywords = defaultProjects[i].variants[j].keywords;
-        updated[i].description = defaultProjects[i].variants[j].description;
+        updated[i].variant = j;
         setDefaultProjects(updated);
     }
 
@@ -45,8 +46,15 @@ export default function BuilderPage() {
             })
         });
 
-        const text = await res.text();
-        console.log("API response:", text);
+        if (res.status == 200) { 
+            toast.success("Generated PDF successfully!")
+        }
+        else if (res.status == 500) {
+            toast.error("Ran into error \n (You might have special characters in your document)")
+        }
+        else {
+            toast.success("Unexpected Error Occured")
+        }
     }
 
     return (
@@ -73,9 +81,9 @@ export default function BuilderPage() {
                                         <div>{defaultExperiences[i].location}</div>
                                     </div>
                                     <div className="col-span-2 ps-4 text-sm">
-                                        {Array.from({length: defaultExperiences[i].description.length}).map((_, j) => (
-                                            <div>
-                                                •  {defaultExperiences[i].description[j]}
+                                        {Array.from({length: defaultExperiences[i].variants[defaultExperiences[i].variant].description.length}).map((_, j) => (
+                                            <div key={j}>
+                                                •  {defaultExperiences[i].variants[defaultExperiences[i].variant].description[j]}
                                             </div>
                                         ))}
                                     </div>
@@ -83,7 +91,7 @@ export default function BuilderPage() {
                                 <div className="grid grid-cols-10 p-2">
                                     {Array.from({length: defaultExperiences[i].variants.length}).map((_, j) =>(
                                         <div key={j}>
-                                            <button onClick={() => changeExperienceVariant(i, j)}>{defaultExperiences[i].variants[j].variantDescription}</button>
+                                            <button className={`${(j == defaultExperiences[i].variant) ? "bg-gray-300" : "bg-gray-200"}`} onClick={() => changeExperienceVariant(i, j)}>{defaultExperiences[i].variants[j].variantDescription}</button>
                                         </div>
                                     ))}
                                 </div>
@@ -105,7 +113,7 @@ export default function BuilderPage() {
                             <div className="grid grid-flow-col grid-rows-4 col-span-3 p-2">
                                 <div className="grid grid-cols-2 row-span-3 bg-white p-2">
                                     <div>
-                                        <span className="font-bold text-base">{defaultProjects[i].name}</span> | <span className="italic text-[15px]">{defaultProjects[i].keywords}</span>
+                                        <span className="font-bold text-base">{defaultProjects[i].name}</span> | <span className="italic text-[15px]">{defaultProjects[i].variants[defaultProjects[i].variant].keywords}</span>
                                     </div>
                                     <div className="justify-items-end text-[15px]">
                                         <div>
@@ -113,9 +121,9 @@ export default function BuilderPage() {
                                         </div> 
                                     </div>
                                     <div className="col-span-2 ps-4 text-sm">
-                                        {Array.from({length: defaultProjects[i].description.length}).map((_, j) => (
-                                            <div>
-                                                •  {defaultProjects[i].description[j]}
+                                        {Array.from({length: defaultProjects[i].variants[defaultProjects[i].variant].description.length}).map((_, j) => (
+                                            <div key={j}>
+                                                •  {defaultProjects[i].variants[defaultProjects[i].variant].description[j]}
                                             </div>
                                         ))}
                                     </div>
@@ -123,7 +131,7 @@ export default function BuilderPage() {
                                 <div className="grid grid-cols-10 p-2">
                                     {Array.from({length: defaultProjects[i].variants.length}).map((_, j) =>(
                                         <div key={j}>
-                                            <button onClick={() => changeProjectVariant(i, j)}>{defaultProjects[i].variants[j].variantDescription}</button>
+                                            <button className={`${(j == defaultProjects[i].variant) ? "bg-gray-300" : "bg-gray-200"}`} onClick={() => changeProjectVariant(i, j)} >{defaultProjects[i].variants[j].variantDescription}</button>
                                         </div>
                                     ))}
                                 </div>
@@ -137,7 +145,7 @@ export default function BuilderPage() {
                     ))}
                 </div>
                 <div className="mb-10">
-                    <button onClick={() => generateResume()}>Submit</button>
+                    <button className="active:bg-gray-200" onClick={() => generateResume()}>Submit</button>
                 </div>
             </div>
         </div>

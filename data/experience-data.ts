@@ -13,6 +13,7 @@ export interface Experience {
     startDate: string;
     endDate: string;
     description: string[];
+    variant: number;
     variants: Variant[];
 }
 
@@ -31,6 +32,7 @@ export const experiences: Experience[] = [
             "Processed and visualized financial data to surface insights like net worth, cash flow trends, and asset allocation.",
             "Added an AI financial assistant with Groq to help users explore their finances and plan investments."
         ],
+        variant: 0,
         variants: [{
             id: 0,
             variantDescription: "Base",
@@ -40,7 +42,18 @@ export const experiences: Experience[] = [
                 "Processed and visualized financial data to surface insights like net worth, cash flow trends, and asset allocation.",
                 "Added an AI financial assistant with Groq to help users explore their finances and plan investments."
             ]
-        }]
+        },
+        {
+            id: 1,
+            variantDescription: "Apple",
+             description: [
+                "Built a personal finance dashboard in React + TypeScript, wrapped into an iOS application using XCode, that aggregates bank accounts, investments, and liabilities using Plaid.",
+                "Implemented secure data handling with Supabase, encrypting access tokens and creating anonymized, shareable financial reports.",
+                "Processed and visualized financial data to surface insights like net worth, cash flow trends, and asset allocation.",
+                "Added an AI financial assistant with Groq to help users explore their finances and plan investments."
+            ]
+        }
+    ]
     },
     {
         id: 1,
@@ -56,6 +69,7 @@ export const experiences: Experience[] = [
             "Implemented a vulnerability scanning pipeline by integrating Azure Defender and OWASP security tools, and generated data for security reports.",
             "Improved development velocity by 40% using Cursor AI and Agile workflows in Linear."
         ],
+        variant: 0,
         variants: [{
             id: 0,
             variantDescription: "SpringBoot",
@@ -102,6 +116,7 @@ export const experiences: Experience[] = [
             "Processed 700K+ posts using Python (Pandas, NumPy), performed sentiment analysis, and visualized statistical analysis using PowerBI.",
             "Applied Reinforcement Learning to optimize hashtag strategies, reducing toxic comments by 20%."
         ],
+        variant: 0,
         variants: [
             {
                 id: 0,
@@ -127,6 +142,7 @@ export const experiences: Experience[] = [
             "Compiled and annotated a comprehensive dataset from multiple sources for model training and optimization.",
             "Containerized the application using Docker, ensuring consistent and scalable deployment across various environments."
         ],
+        variant: 0,
         variants: [
             {
                 id: 0,
