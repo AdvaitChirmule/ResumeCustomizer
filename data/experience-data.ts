@@ -123,6 +123,7 @@ export const experiences: Experience[] = [
             description: [
                 "Built a Spring Boot based security dashboard for a startup, for clients to continuously assess and fix vulnerabilities.",
                 "Implemented an Azure asset ingestion pipeline, normalizing data into MongoDB and serving it via REST APIs to the React dashboard with 300 ms average latency.",
+                "Implemented an Azure asset ingestion pipeline, normalizing data into MongoDB and serving it via REST APIs to the React dashboard with 300 ms average latency.",
                 "Implemented a vulnerability scanning pipeline by integrating Azure Defender and OWASP security tools, and generated data for security reports.",
                 "Improved development velocity by 40% using Cursor AI and Agile workflows in Linear."
             ]
