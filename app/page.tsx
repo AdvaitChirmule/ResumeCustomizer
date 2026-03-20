@@ -15,7 +15,8 @@ export default function Home() {
     }, 500)
     const timeout2 = setTimeout(() => {
       setStartTimeline3(true)
-    }, 1000)  })
+    }, 1000)
+  })
 
 
   useEffect(() => {
@@ -48,22 +49,24 @@ export default function Home() {
           <button className="bg-sky-800 rounded p-5">Learn More!</button>
         </div>
       </div>
-      <div id="hi" className="bg-gray-400 p-5 place-items-center grid grid-cols-9 w-full h-full">
-        <div></div>
-        <div className="grid grid-rows-3 col-span-3 h-full w-full">
-          <div className={`h-full w-full bg-white duration-300 ease-out ${startTimeline ? "scale-y-100": "scale-y-0"}`}>Swap projects with simple clicks</div>
-          <div className="h-full w-full"></div>
-          <div className={`h-full w-full bg-white duration-300 ease-out ${startTimeline3 ? "scale-y-100": "scale-y-0"}`}>Save your progress on your account</div>
+      <div id="hi" className="bg-cover bg-center bg-[url('/sand.jpg')] p-5 place-items-center w-full h-full">
+        <div className="grid grid-cols-9 backdrop-blur-sm place-items-center w-full h-full">
+          <div></div>
+          <div className="grid grid-rows-3 col-span-3 h-full w-full">
+            <div className={`h-full w-full bg-[#F7F2EE] duration-300 ease-out ${startTimeline ? "scale-y-100" : "scale-y-0"}`}>Swap projects with simple clicks</div>
+            <div className="h-full w-full"></div>
+            <div className={`h-full w-full bg-white duration-300 ease-out ${startTimeline3 ? "scale-y-100" : "scale-y-0"}`}>Save your progress on your account</div>
+          </div>
+          <div className="h-full">
+            <div className={`w-1 h-full origin-top bg-black/50 duration-3600 ease-out ${startTimeline ? "scale-y-100" : "scale-y-0"}`}></div>
+          </div>
+          <div className="grid grid-rows-3 col-span-3 h-full w-full">
+            <div className="h-full w-full"></div>
+            <div className={`h-full w-full bg-white duration-300 ease-out ${startTimeline2 ? "scale-y-100" : "scale-y-0"}`}>Add job description to get recommendations to tweak your Resume</div>
+            <div className="h-full w-full"></div>
+          </div>
+          <div></div>
         </div>
-        <div className="h-full">
-          <div className={`w-1 h-full origin-top bg-black/50 duration-3600 ease-out ${startTimeline ? "scale-y-100": "scale-y-0"}`}></div>
-        </div>
-        <div className="grid grid-rows-3 col-span-3 h-full w-full">
-          <div className="h-full w-full"></div>
-          <div className={`h-full w-full bg-white duration-300 ease-out ${startTimeline2 ? "scale-y-100": "scale-y-0"}`}>Add job description to get recommendations to tweak your Resume</div>
-          <div className="h-full w-full"></div>
-        </div>
-        <div></div>
       </div>
       <div className="bg-gray-200 h-1/2">
         How we make your life easier

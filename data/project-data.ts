@@ -28,18 +28,38 @@ export const projects: Project[] = [
         endDate: "Jan 2026",
         keywords: "Next.js, TypeScript, Supabase, Tailwind CSS",
         description: [
-                "Developed a web app that customizes Resumes on Overleaf with just a few button clicks, in mere seconds.",
-                "Developed a lightweight frontend using Next.js, TypeScript, and Tailwind CSS for fast load times and clean UI.",
-                "Implemented Supabase authentication and database to manage user accounts and resume versions and variants."
+            "Developed a web app that customizes Resumes with simple clicks and generates in Overleaf format, bringing down time from ~200 seconds to ~20 seconds",
+            "Developed a lightweight frontend using Next.js, TypeScript, and Tailwind CSS for fast load times, and clean UI.",
+            "Implemented Supabase authentication and database to manage user accounts and resume versions and variants."
         ],
         variant: 0,
         variants: [{
             id: 0,
             variantDescription: "Base",
-            keywords: "Next.js, TypeScript, Tailwind CSS, Postgres",
+            keywords: "Next.js, TypeScript, Tailwind CSS, Supabase",
             description: [
-                "Developed a web app that customizes Resumes on Overleaf with just a few button clicks, in mere seconds.",
+                "Developed a web app that customizes Resumes with simple clicks and generates in Overleaf format, bringing down time from ~200 seconds to ~20 seconds",
                 "Developed a lightweight frontend using Next.js, TypeScript, and Tailwind CSS for fast load times and clean UI.",
+                "Implemented Supabase authentication and database to manage user accounts and resume versions and variants."
+            ]
+        },
+        {
+            id: 1,
+            variantDescription: "Overleaf",
+            keywords: "Next.js, TypeScript, Tailwind CSS, Supabase, Overleaf",
+            description: [
+                "Developed a web app that customizes Resumes on Overleaf programmatically, using TinyTex, with just a few button clicks, in mere seconds.",
+                "Developed a lightweight frontend using Next.js, TypeScript, and Tailwind CSS for fast load times and clean UI.",
+                "Implemented Supabase authentication and database to manage user accounts and resume versions and variants."
+            ]
+        },
+        {
+            id: 2,
+            variantDescription: "Tanstack",
+            keywords: "Next.js, TypeScript, Tailwind CSS, Supabase, TanStack",
+            description: [
+                "Developed a web app that customizes Resumes with simple clicks and generates in Overleaf format, bringing down time from ~200 seconds to ~20 seconds",
+                "Developed a lightweight frontend using Next.js, TypeScript, and Tailwind CSS with TanStack queries for caching and fast load times, and clean UI.",
                 "Implemented Supabase authentication and database to manage user accounts and resume versions and variants."
             ]
         }]
@@ -55,12 +75,12 @@ export const projects: Project[] = [
         description: ["You are looking at it right now!"],
         variant: 0,
         variants: [
-        {
-            id: 0,
-            variantDescription: "Base",
-            keywords: "Next.js, TypeScript",
-            description: ["You are looking at it right now!"]
-        }]
+            {
+                id: 0,
+                variantDescription: "Base",
+                keywords: "Next.js, TypeScript",
+                description: ["You are looking at it right now!"]
+            }]
     },
     {
         id: 2,
@@ -78,28 +98,28 @@ export const projects: Project[] = [
         ],
         variant: 0,
         variants: [
-        {
-            id: 0,
-            variantDescription: "Cross Platform",
-            keywords: "ASP.NET, C#, JavaScript, AJAX, Kotlin, XML, Firebase",
-            description: [
-                "Built a cross-platform GRE study app serving 100+ users, enabling vocab practice and a multiplayer word game.",
-                "Developed web (ASP.NET MVC) and Android versions (Android Studio) connected via Firebase RESTful APIs for secure login and game room management.",
-                "Created a custom algorithm to handle network lag and maintain multiplayer game sync.",
-                "Added SQL Server caching for offline functionality and to reduce latency by 60%."
-            ]
-        },
-        {
-            id: 1,
-            variantDescription: "Android App",
-            keywords: "Android Studio, Kotlin, XML, Firebase",
-            description: [
-                "Built a cross-platform GRE study app serving 100+ users, enabling vocab practice and a multiplayer word game.",
-                "Developed web (ASP.NET MVC) and Android versions (Android Studio) connected via Firebase RESTful APIs for secure login and game room management.",
-                "Created a custom algorithm to handle network lag and maintain multiplayer game sync.",
-                "Added SQL Server caching for offline functionality and to reduce latency by 60%."
-            ]
-        }]
+            {
+                id: 0,
+                variantDescription: "Cross Platform",
+                keywords: "ASP.NET, C#, JavaScript, AJAX, Kotlin, XML, Firebase",
+                description: [
+                    "Built a cross-platform GRE study app serving 100+ users, enabling vocab practice and a multiplayer word game.",
+                    "Developed web (ASP.NET MVC) and Android versions (Android Studio) connected via Firebase RESTful APIs for secure login and game room management.",
+                    "Created a custom algorithm to handle network lag and maintain multiplayer game sync.",
+                    "Added SQL Server caching for offline functionality and to reduce latency by 60%."
+                ]
+            },
+            {
+                id: 1,
+                variantDescription: "Android App",
+                keywords: "Android Studio, Kotlin, XML, Firebase",
+                description: [
+                    "Built a cross-platform GRE study app serving 100+ users, enabling vocab practice and a multiplayer word game.",
+                    "Developed web (ASP.NET MVC) and Android versions (Android Studio) connected via Firebase RESTful APIs for secure login and game room management.",
+                    "Created a custom algorithm to handle network lag and maintain multiplayer game sync.",
+                    "Added SQL Server caching for offline functionality and to reduce latency by 60%."
+                ]
+            }]
     },
     {
         id: 3,
@@ -116,16 +136,16 @@ export const projects: Project[] = [
         ],
         variant: 0,
         variants: [
-        {
-            id: 0,
-            variantDescription: "Base",
-            keywords: "Java, Linux, Algorithms, Git",
-            description: [
-                "Developed an application that identifies famous personalities from videos.",
-                "Configured an AWS EC2 instance to split videos using ffmpeg, and run through a deep learning recognition model.",
-                "Designed a inference layer using Amazon Machine Images (AMI), auto-scaling dynamically from 0 to 20 instances based on workload. Coupled with Amazon SQS queues, achieved a throughput of 500 requests in 240 seconds."
-            ]
-        }]
+            {
+                id: 0,
+                variantDescription: "Base",
+                keywords: "Java, Linux, Algorithms, Git",
+                description: [
+                    "Developed an application that identifies famous personalities from videos.",
+                    "Configured an AWS EC2 instance to split videos using ffmpeg, and run through a deep learning recognition model.",
+                    "Designed a inference layer using Amazon Machine Images (AMI), auto-scaling dynamically from 0 to 20 instances based on workload. Coupled with Amazon SQS queues, achieved a throughput of 500 requests in 240 seconds."
+                ]
+            }]
     },
     {
         id: 4,
@@ -138,12 +158,12 @@ export const projects: Project[] = [
         description: ["Worked on classifying the basic lung diseases on the CheXpert dataset using models like ImageIntern, ConvNext to establish SOTA baselines, after pre-processing the large datasets on the university's Slurm supercomputer."],
         variant: 0,
         variants: [
-        {
-            id: 0,
-            variantDescription: "Base",
-            keywords: "Python, Image Processing",
-            description: ["Worked on classifying the basic lung diseases on the CheXpert dataset using models like ImageIntern, ConvNext to establish SOTA baselines, after pre-processing the large datasets on the university's Slurm supercomputer."],
-        }]
+            {
+                id: 0,
+                variantDescription: "Base",
+                keywords: "Python, Image Processing",
+                description: ["Worked on classifying the basic lung diseases on the CheXpert dataset using models like ImageIntern, ConvNext to establish SOTA baselines, after pre-processing the large datasets on the university's Slurm supercomputer."],
+            }]
     },
     {
         id: 5,
@@ -160,16 +180,16 @@ export const projects: Project[] = [
         ],
         variant: 0,
         variants: [
-        {
-            id: 0,
-            variantDescription: "Base",
-            keywords: "Java, Linux, Algorithms, Git",
-            description: [
-                "Extended Minibase (Java DBMS on Linux) with column-store support and bitmap indexes, for efficient querying.",
-                "Designed a custom compression algorithm using Run-Length Encoding (RLE) and Bit Stuffing, reducing storage footprint and achieving 15% faster performance than standard RLE.",
-                "Validated new features with CRUD operations and joins, successfully handling 100K rows in under 30 seconds."
-            ],
-        }]
+            {
+                id: 0,
+                variantDescription: "Base",
+                keywords: "Java, Linux, Algorithms, Git",
+                description: [
+                    "Extended Minibase (Java DBMS on Linux) with column-store support and bitmap indexes, for efficient querying.",
+                    "Designed a custom compression algorithm using Run-Length Encoding (RLE) and Bit Stuffing, reducing storage footprint and achieving 15% faster performance than standard RLE.",
+                    "Validated new features with CRUD operations and joins, successfully handling 100K rows in under 30 seconds."
+                ],
+            }]
     },
     {
         id: 6,
@@ -187,17 +207,17 @@ export const projects: Project[] = [
         ],
         variant: 0,
         variants: [
-        {
-            id: 0,
-            variantDescription: "Base",
-            keywords: "React, FastAPI, Recharts, Node.js, Docker",
-            description: [
-                "Developed a Taiga project analytics tool delivering project analysis metrics to improve sprint efficiency.",
-                "Built with React (frontend), Node.js middleware, and a FastAPI backend (with OAuth 2.0 for login)",
-                "Achieved 80% faster performance with Redis caching and deployed scalable, containerized services using Docker.",
-                "Collaborated in Agile workflows, including sprint planning, code reviews, and daily standups, improving velocity."
-            ],
-        }]
+            {
+                id: 0,
+                variantDescription: "Base",
+                keywords: "React, FastAPI, Recharts, Node.js, Docker",
+                description: [
+                    "Developed a Taiga project analytics tool delivering project analysis metrics to improve sprint efficiency.",
+                    "Built with React (frontend), Node.js middleware, and a FastAPI backend (with OAuth 2.0 for login)",
+                    "Achieved 80% faster performance with Redis caching and deployed scalable, containerized services using Docker.",
+                    "Collaborated in Agile workflows, including sprint planning, code reviews, and daily standups, improving velocity."
+                ],
+            }]
     },
     {
         id: 7,
@@ -214,16 +234,16 @@ export const projects: Project[] = [
         ],
         variant: 0,
         variants: [
-        {
-            id: 0,
-            variantDescription: "Base",
-            keywords: "Neo4j, Kubernetes, Kafka, Zookeeper",
-            description: [
-                "Designed a scalable pipeline using Kubernetes, Kafka, and Neo4j for real-time document stream processing.",
-                "Deployed Minikube as the orchestrator and configured Kafka and Zookeeper for data ingestion and distribution.",
-                "Loaded data onto Neo4j and performed Page Rank and Breadth First Search used for finding busy areas and the best path."
-            ]
-        }
+            {
+                id: 0,
+                variantDescription: "Base",
+                keywords: "Neo4j, Kubernetes, Kafka, Zookeeper",
+                description: [
+                    "Designed a scalable pipeline using Kubernetes, Kafka, and Neo4j for real-time document stream processing.",
+                    "Deployed Minikube as the orchestrator and configured Kafka and Zookeeper for data ingestion and distribution.",
+                    "Loaded data onto Neo4j and performed Page Rank and Breadth First Search used for finding busy areas and the best path."
+                ]
+            }
         ]
     }
 ];
