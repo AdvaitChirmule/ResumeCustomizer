@@ -103,7 +103,18 @@ export const experiences: Experience[] = [
             description: [
                 "Built a personal finance dashboard in React + TypeScript, and an iOS counterpart using XCode and Capacitor, that aggregates bank accounts, investments, and liabilities using Plaid.",
                 "Implemented secure data handling with Supabase, encrypting access tokens and creating anonymized, shareable financial reports.",
-                "Developed an agentic AI using OpenAI that interprets user queries, selects, and returns insights with dynamic data visualizations."
+                "Developed an agentic AI using OpenAI that interprets user queries, selects, and returns insights with dynamic data visualizations.",
+                "Added a RAG layer to the agentic AI to make the conversations flow better and with added context"
+            ]
+        },
+        {
+            id: 4,
+            variantDescription: "Web",
+            description: [
+                "Built a personal finance dashboard in React + TypeScript (Vite) that aggregates bank accounts, investments, and liabilities using Plaid.",
+                "Added Google Analytics to measure viewership and used best SEO practices to boost the website on Google search",
+                "Implemented secure data handling with Supabase, encrypting access tokens and creating anonymized, shareable financial reports.",
+                "Developed an agentic AI that interprets user queries, and returns insights with dynamic data visualizations."
             ]
         }
         ]
@@ -122,7 +133,6 @@ export const experiences: Experience[] = [
             variantDescription: "SpringBoot",
             description: [
                 "Built a Spring Boot based security dashboard for a startup, for clients to continuously assess and fix vulnerabilities.",
-                "Implemented an Azure asset ingestion pipeline, normalizing data into MongoDB and serving it via REST APIs to the React dashboard with 300 ms average latency.",
                 "Implemented an Azure asset ingestion pipeline, normalizing data into MongoDB and serving it via REST APIs to the React dashboard with 300 ms average latency.",
                 "Implemented a vulnerability scanning pipeline by integrating Azure Defender and OWASP security tools, and generated data for security reports.",
                 "Improved development velocity by 40% using Cursor AI and Agile workflows in Linear."
